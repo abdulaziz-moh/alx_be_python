@@ -1,5 +1,5 @@
 age = int(input())
 
-age += 27
+new_age = age + 27
 
-print("In 2050, you will be ",age," years old.")
+print("In 2050, you will be ",new_age," years old.")

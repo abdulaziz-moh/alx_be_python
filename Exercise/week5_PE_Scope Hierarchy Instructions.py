@@ -46,6 +46,8 @@ def outer_function():
 
         # Let's demonstrate accessing the enclosing variable name, if it wasn't re-declared locally
         # This block shows the LEGB rule more clearly for the 'enclosing_only_var'
+        # nonlocal my_var  # This would allow us to modify the outer 'my_var' if we wanted to.
+
         enclosing_only_var = "This var is from outer_function, seen by inner_function if not shadowed."
         print(f"Inside inner_function (trying to find enclosing_only_var): This would be found by LEGB if it wasn't shadowed.")
         # If we had:

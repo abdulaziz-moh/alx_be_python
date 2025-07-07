@@ -14,3 +14,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# python alx_be_python\\programming_paradigm\\main.py ten 0

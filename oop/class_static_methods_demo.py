@@ -16,3 +16,26 @@ class Calculator:
         """
         print(f"Calculation type: {cls.calculation_type}")
         return a * b
+
+
+# main.py (Provided for Testing):
+# This script will test the Calculator class’s static and class methods, demonstrating their functionality and how they are called.
+
+# from class_static_methods_demo import Calculator
+
+def main():
+    # Using the static method
+    sum_result = Calculator.add(10, 5)
+    print(f"The sum is: {sum_result}")
+
+    # Using the class method
+    product_result = Calculator.multiply(10, 5)
+    print(f"The product is: {product_result}")
+
+if __name__ == "__main__":
+    main()
+
+# Note for you:
+# Understand the use of @staticmethod for functions that perform a task in isolation, without needing access to class or instance-specific data.
+# Grasp the concept of @classmethod for functions that need to access class attributes or methods and understand how the cls parameter allows access to class-level attributes.
+# This task underscores the distinction between class methods and static methods in Python, providing clarity on their appropriate use cases and advantages.

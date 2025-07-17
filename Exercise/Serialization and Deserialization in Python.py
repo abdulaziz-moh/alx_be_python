@@ -1,6 +1,6 @@
 # sample python object
 python_data = {'name':'Abebe','age':20,'city':'Addis Abeba'}
-python_data = [[1,2,3,4,5]]
+# python_data = [[1,2,3,4,5]]
 
 # ------------------------------------------------------------------------------#
 
@@ -49,3 +49,15 @@ with open('my_file.pkl','rb') as read_picklefile_obj:
 # ------------------------------------------------------------------------------#
 
 #  Warning: The pickle module is not secure. Only unpickle data you trust.
+
+# task for serialization and deserialization
+# import json
+def process_json(data: dict, filename: str) -> dict:
+    with open(filename,'w') as jsonfile:
+        json.dump(data,jsonfile)
+
+    with open(filename,'r') as jsonfile:
+        deserialized_todict_data = json.load(jsonfile)
+        return deserialized_todict_data
+
+print(process_json(python_data,'my_file.json'))
